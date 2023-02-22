@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    height: 100%;
+    border: solid red;
+}
+
+#ideabox {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+#filter-ideas {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #A9AAD2;
+}
+
+#input-container {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid green;
+    background-color: #A9AAD2;
+    margin-left: 15%;    
+}
+
+#output-container {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid orange;
+    background-color: #A9AAD2;
+    margin-left: 15%; 
+}
+
