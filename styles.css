@@ -1,9 +1,14 @@
+* {
+    font-family: 'Open Sans';
+}
+
 body, html {
     margin: 0;
     padding: 0;
 }
 
 #nav-container {
+    background-color: #1F1F3D;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -17,16 +22,29 @@ body, html {
 }
 
 #ideabox {
+    color: #E9E9F3;
     font-weight: 800;
     font-size: 1.5rem;
+    padding: 4%;
 }
 
 #filter-ideas {
+    color: #BFBFDD;
     width: 100%;
     display: block;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid #A9AAD2;
+    border: .5px solid #353567;
+    padding: 0 0 4% 4%;
+}
+
+.show-starred-button {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: #5356A4;
+    color: #E9E9F3;
+    border: none;
+    padding: 10px 25px;
 }
 
 #input-container {
