@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">"
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
         <title>IdeaBox</title>
     </head>
     <body>
@@ -15,25 +16,31 @@
         </nav>
         <section id="input-container">
             <fieldset>
-                title input
-                body input
+                <label for="title-input">Title</label>
+                <input type="text" name="title-input" id="title-input">
+                <label for="body-input">Body</label>
+                <input type="text" name="body-input" id="body-input">
                 <button class="save-button">Save</button>
             </fieldset>
-            search bar<input type="search">
+            <div class="search-bar">
+                <img id="search-icon" src="assets/search.svg" alt="search ideas" height="20px" width="20px"></img>
+                <label for="search-input"></label>
+                <input type="search" id="search-input" placeholder="Search ideas" name="search-input">
+            </div>
         </section>
         <section id="output-container">
             <article class="card-container">
                 <div class="container-top-nav">
-                    <img id="star-icon" src="" alt=""></img> 
-                    <img id="x-icon" src="" alt=""></img> 
+                    <img class="star-icon" src="assets/star.svg" alt="favorite idea" height="20px" width="20px"></img> 
+                    <img class="delete-icon" src="assets/delete.svg" alt="delete idea" height="20px" width="20px"></img> 
                 </div>
                 <div class="idea-container">
-                    <p id="title-output">Idea title</p>
-                    <p id="body-output">Idea body. Don't ever play yourself. Every chance I get I water the plants, Lion! Cloth talk.</p>
+                    <p class="title-output">Idea title</p>
+                    <p class="body-output">Idea body. Don't ever play yourself. Every chance I get I water the plants, Lion! Cloth talk.</p>
                 </div>
                 <div class="container-bottom-nav">
-                    <img id="plus-icon" src="" alt=""></img> 
-                    <p id="comment">Comment</p>
+                    <img class="plus-icon" src="assets/comment.svg" alt="add comment" height="20px" width="20px"></img> 
+                    <p class="comment">Comment</p>
                 </div>
             </article>
         </section>
