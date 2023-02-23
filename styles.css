@@ -1,14 +1,16 @@
+
+/*  Need to adjust camel case vs kebab case in HTML */
+
 * {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
 }
 
 body, html {
     margin: 0;
-    padding: 0;
+    background-color: #Eaeaf4;
 }
 
 #nav-container {
-    background-color: #1F1F3D;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -18,54 +20,174 @@ body, html {
     bottom: 0;
     width: 15%;
     height: 100%;
-    border: solid red;
+    background-color: #1F1F3D;
+    height: 100%;
 }
 
 #ideabox {
+    padding-left: 5%;
+    font-size: medium;
+    font-weight: bold;
     color: #E9E9F3;
-    font-weight: 800;
-    font-size: 1.5rem;
-    padding: 4%;
 }
 
 #filter-ideas {
-    color: #BFBFDD;
-    width: 100%;
-    display: block;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     border: .5px solid #353567;
-    padding: 0 0 4% 4%;
+    padding: 2.5% 5% 10% 5%;
+    font-size: small;
+    font-weight: bold;
+    color: #BFBFDD;
 }
 
 .show-starred-button {
-    font-size: 1.5rem;
-    font-weight: 800;
+    padding: 8px 20px;
+    margin-top: 2.5%;
     background-color: #5356A4;
-    color: #E9E9F3;
     border: none;
-    padding: 10px 25px;
+    font-size: medium;
+    font-weight: bold;
+    color: #E9E9F3;
 }
 
 #input-container {
     display: flex;
-    margin: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid green;
-    background-color: #A9AAD2;
     margin-left: 15%;    
+    background-color: #A9AAD2;
+    border-left: .5px solid #E9E9F3;
+}
+
+fieldset {
+    width: 40%;
+    border: none;
+    margin-bottom: 1%;
+    font-size: medium;
+}
+
+/* .input-field    {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 100%;
+} */
+
+#title-input    {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 1.5rem;
+}
+
+#body-input {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    width: 100%;
+    height: 8rem
+}
+
+.save-button    {
+    width: 101%;
+    height: 2.5rem;
+    margin-bottom: 25px;
+    padding: 5px;
+    background-color: #353567;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    color:#E9E9F3;
+}
+
+.search-bar {
+    width: 101%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    background-color: #353567;
+}
+
+#search-icon {
+    height: 1.5em;
+    width: 1.5em;
+    padding: 7px;
+}
+
+#search-input   {
+    width: 100%;
 }
 
 #output-container {
     display: flex;
-    margin: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid orange;
-    background-color: #A9AAD2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 100%;
     margin-left: 15%; 
 }
 
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 250px;
+    margin: 2.5%;
+    background: #ffffff;
+    border: solid #1F1F3D .5px;
+}
+
+.container-top-nav  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.5px;
+    background: #1F1F3D;
+}
+
+.idea-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+#star-icon  {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+#delete-icon    {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.title-output   {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.container-bottom-nav   {
+    display: flex;
+    flex-direction: row;
+    justify-content: flext-start;
+    align-items: center;
+    height: 1.6em;
+    padding: 2.5px;
+    background-color: #5356A4;
+}
+
+#plus-icon  {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+#comment    {
+    font-size: small;
+    font-weight: bold;
+    color: #E9E9F3
+}
