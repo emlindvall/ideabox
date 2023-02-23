@@ -3,7 +3,9 @@
     <head>
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
         <title>IdeaBox</title>
     </head>
     <body>
@@ -17,30 +19,30 @@
         <section id="input-container">
             <fieldset>
                 <label for="title-input">Title</label>
-                <input type="text" name="title-input" id="title-input">
+                <input type="text" name="title-input" class="input-field" id="title-input">
                 <label for="body-input">Body</label>
-                <input type="text" name="body-input" id="body-input">
+                <input type="text" name="body-input" class="input-field" id="body-input">
                 <button class="save-button">Save</button>
-            </fieldset>
-            <div class="search-bar">
-                <img id="search-icon" src="assets/search.svg" alt="search ideas" height="20px" width="20px"></img>
-                <label for="search-input"></label>
-                <input type="search" id="search-input" placeholder="Search ideas" name="search-input">
-            </div>
+                <div class="search-bar">
+                    <img id="search-icon" src="assets/search.svg" alt="search ideas"></img>
+                    <label for="search-input"></label>
+                    <input type="search" id="search-input" placeholder=" Search ideas" name="search-input">
+                </div>
+                </fieldset>
         </section>
         <section id="output-container">
             <article class="card-container">
                 <div class="container-top-nav">
-                    <img class="star-icon" src="assets/star.svg" alt="favorite idea" height="20px" width="20px"></img> 
-                    <img class="delete-icon" src="assets/delete.svg" alt="delete idea" height="20px" width="20px"></img> 
+                    <img id="star-icon" src="assets/star.svg" alt="favorite idea"></img> 
+                    <img id="delete-icon" src="assets/delete.svg" alt="delete idea"></img> 
                 </div>
                 <div class="idea-container">
                     <p class="title-output">Idea title</p>
                     <p class="body-output">Idea body. Don't ever play yourself. Every chance I get I water the plants, Lion! Cloth talk.</p>
                 </div>
                 <div class="container-bottom-nav">
-                    <img class="plus-icon" src="assets/comment.svg" alt="add comment" height="20px" width="20px"></img> 
-                    <p class="comment">Comment</p>
+                    <img id="plus-icon" src="assets/comment.svg" alt="add comment"></img> 
+                    <p id="comment">Comment</p>
                 </div>
             </article>
         </section>
