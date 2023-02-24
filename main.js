@@ -34,3 +34,29 @@ outputContainer.addEventListener("click", function(){starIdea(event)});
 function show(element) {
     element.style.visibility = "visible";
 }
+
+function hide(element) {
+  element.style.visibility = "hidden";
+}
+function showSavedIdeas()  {
+    outputContainer.innerHTML = ``;
+    for (var i = 0; i < savedIdeas.length; i++)    {
+        outputContainer.innerHTML += `
+        <article class="card-container">
+            <div class="container-top-nav">
+                 <img id="star-icon" src="assets/star.svg" alt="favorite idea"></img> 
+                 <img id="delete-icon" src="assets/delete.svg" alt="delete idea"></img> 
+            </div>
+            <div class="idea-container">
+                <p class="title-output">${savedIdeas[i].title}</p>
+                <p class="body-output">${savedIdeas[i].body}</p>
+            </div>
+            <div class="container-bottom-nav">
+                <img id="plus-icon" src="assets/comment.svg" alt="add comment"></img> 
+                <p id="comment">Comment</p>
+            </div>
+        </article>
+        `
+        show(outputContainer);
+    }
+}
