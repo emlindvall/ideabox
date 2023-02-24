@@ -19,9 +19,9 @@
         <section id="input-container">
             <fieldset>
                 <label for="title-input">Title</label>
-                <input type="text" name="title-input" class="input-field" id="title-input">
+                <input type="text" name="title-input" class="input-field" id="title-input" required/>
                 <label for="body-input">Body</label>
-                <input type="text" name="body-input" class="input-field" id="body-input">
+                <textarea rows="1" cols="25" name="body-input" class="input-field" id="body-input" required></textarea>
                 <button class="save-button">Save</button>
                 <div class="search-bar">
                     <img id="search-icon" src="assets/search.svg" alt="search ideas"></img>
@@ -30,7 +30,7 @@
                 </div>
                 </fieldset>
         </section>
-        <section id="output-container">
+        <section id="outputContainer">
             <article class="card-container">
                 <div class="container-top-nav">
                     <img id="star-icon" src="assets/star.svg" alt="favorite idea"></img> 
