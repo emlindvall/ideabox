@@ -86,7 +86,7 @@ fieldset {
     margin-top: 2%;
     margin-bottom: 3%;
     width: 100%;
-    height: 8rem
+    height: 8rem;
 }
 
 .save-button    {
@@ -119,7 +119,7 @@ fieldset {
     width: 100%;
 }
 
-#output-container {
+#outputContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -154,6 +154,7 @@ fieldset {
     margin-right: 10px;
     margin-bottom: 0px;
     margin-left: 10px;
+    height: 100%;
 }
 
 #star-icon  {
