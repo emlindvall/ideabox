@@ -1,12 +1,12 @@
 // Query Selectors
 
-var titleInput = document.querySelector('#title-input');
-var bodyInput = document.querySelector('#body-input');
+var titleInput = document.querySelector('#titleInput');
+var bodyInput = document.querySelector('#bodyInput');
 var saveButton = document.querySelector('.save-button');
-var outputContainer = document.querySelector('#outputContainer');
-var deleteIcon = document.querySelector('#delete-icon');
+var outputContainer = document.querySelector('.output-container');
+var deleteIcon = document.querySelector('#deleteIcon');
 var toggleStarredIdeasButton = document.querySelector('.show-starred-button');
-var searchInput = document.querySelector('#search-input');
+var searchInput = document.querySelector('#searchInput');
 
 // Data Model Variables
 
@@ -15,21 +15,23 @@ var ideas = [];
 // Event Listeners 
 
 saveButton.addEventListener('click', function(event){
-    console.log('Hey')
     event.preventDefault();
   if (titleInput.value !== "" && bodyInput.value !== "") {
       saveIdea();
       updateCardOutput();
       clearInputs();
+  } else {
+    inputWarning()
+    setTimeout(clearInputs, 2000)
   }
 }
 );
 
 outputContainer.addEventListener('click', function(){
-    if (event.target.id === "delete-icon") {
+    if (event.target.className.includes("delete")) {
         deleteIdea();
         updateCardOutput();
-    } else if (event.target.id === "star-icon") {
+    } else if (event.target.className.includes("star")) {
         toggleStar();
         updateCardOutput();
     }
@@ -44,6 +46,7 @@ toggleStarredIdeasButton.addEventListener('click', function(){
         updateCardOutput();
     }
 });
+
 
 // Functions
 
@@ -66,10 +69,9 @@ function deleteIdea() {
 }
 
 function toggleStar() {
-    console.log(ideas)
     for (i = 0; i < ideas.length; i++) {
         if (ideas[i].id == event.target.parentNode.id) {
-            ideas[i].star = !ideas[i].star;
+            ideas[i].updateIdea()
         }
     }
 }
@@ -81,16 +83,16 @@ function updateCardOutput(){
       outputContainer.innerHTML +=
       `<article class="card-container">
           <div class="container-top-nav" id="${ideas[i].id}">
-              <img id="star-icon" src="${starred}" alt="favorite idea"></img> 
-              <img id="delete-icon" src="assets/delete.svg" alt="delete idea"></img> 
+              <img class="star-icon icons" src="${starred}" alt="favorite idea"></img> 
+              <img class="delete-icon icons" src="assets/delete.svg" alt="delete idea"></img> 
           </div>
           <div class="idea-container">
               <p class="title-output">${ideas[i].title}</p>
               <p class="body-output">${ideas[i].body}</p>
           </div>
           <div class="container-bottom-nav">
-              <img id="plus-icon" src="assets/comment.svg" alt="add comment"></img> 
-              <p id="comment">Comment</p>
+              <img class="plus-icon icons" src="assets/comment.svg" alt="add comment"></img> 
+              <p class="comment">Comment</p>
           </div>
       </article>`
       }
@@ -106,18 +108,23 @@ function showStarred() {
                 outputContainer.innerHTML +=
                 `<article class="card-container">
                     <div class="container-top-nav" id="${ideas[i].id}">
-                        <img id="star-icon" src="${starred}" alt="favorite idea"></img> 
-                        <img id="delete-icon" src="assets/delete.svg" alt="delete idea"></img> 
+                        <img class="star-icon icons" src="${starred}" alt="favorite idea"></img> 
+                        <img class="delete-icon icons" src="assets/delete.svg" alt="delete idea"></img> 
                     </div>
                     <div class="idea-container">
                         <p class="title-output">${ideas[i].title}</p>
                         <p class="body-output">${ideas[i].body}</p>
                     </div>
                     <div class="container-bottom-nav">
-                        <img id="plus-icon" src="assets/comment.svg" alt="add comment"></img> 
-                        <p id="comment">Comment</p>
+                        <img class="plus-icon icons" src="assets/comment.svg" alt="add comment"></img> 
+                        <p class="comment">Comment</p>
                     </div>
                 </article>`
             }
         }
 };
+
+function inputWarning(){
+    titleInput.value = "Please enter a title for your idea!"
+    bodyInput.value = "Please enter your idea text!"
+}

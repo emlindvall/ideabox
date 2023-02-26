@@ -9,28 +9,28 @@
         <title>IdeaBox</title>
     </head>
     <body>
-        <nav id="nav-container">
-            <p id="ideabox">IdeaBox</p>
-            <article id="filter-ideas">
-                <p id="starred-ideas-filter">Filter Starred Ideas</p>
+        <nav class="nav-container">
+            <p class="ideabox">IdeaBox</p>
+            <article class="filter-ideas">
+                <p id="starredIdeasFilter">Filter Starred Ideas</p>
                 <button class="show-starred-button">Show Starred Ideas</button>
             </article>    
         </nav>
-        <section id="input-container">
+        <section class="input-container">
             <fieldset>
-                <label for="title-input">Title</label>
-                <input type="text" name="title-input" class="input-field" id="title-input" required/>
-                <label for="body-input">Body</label>
-                <textarea rows="1" cols="25" name="body-input" class="input-field" id="body-input" required></textarea>
+                <label for="title-input" class="input-labels">Title</label>
+                <input type="text" name="title-input" class="input-fields" id="titleInput" required/>
+                <label for="body-input" class="input-labels">Body</label>
+                <textarea rows="1" cols="25" name="body-input" class="input-fields" id="bodyInput" required></textarea>
                 <button class="save-button">Save</button>
                 <div class="search-bar">
-                    <img id="search-icon" src="assets/search.svg" alt="search ideas"></img>
-                    <label for="search-input"></label>
-                    <input type="search" id="search-input" placeholder=" Search ideas" name="search-input">
+                    <img class="search-icon icons" src="assets/search.svg" alt="search ideas"></img>
+                    <label for="searchInput"></label>
+                    <input type="search" id="searchInput" class="search-input"placeholder=" Search ideas" name="search-input">
                 </div>
                 </fieldset>
         </section>
-        <section id="outputContainer"></section>
+        <section class="output-container"></section>
     </body>
     <script type="text/javascript" src="idea.js"></script>
     <script type="text/javascript" src="main.js"></script>
