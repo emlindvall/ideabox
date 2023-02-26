@@ -101,6 +101,11 @@ fieldset {
     color:#E9E9F3;
 }
 
+#title-input:invalid + .save-button, #body-input:invalid + .save-button {
+    cursor:not-allowed;
+    opacity: 0.6;
+}
+
 .search-bar {
     width: 101%;
     display: flex;
