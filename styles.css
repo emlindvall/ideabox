@@ -105,10 +105,10 @@ fieldset {
 }
 
 .search-bar {
-    width: 101%;
     display: flex;
     flex-direction: row;
     justify-content: start;
+    width: 101%;
     background-color: #353567;
     color: #5356A4;
 }
