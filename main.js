@@ -47,6 +47,11 @@ toggleStarredIdeasButton.addEventListener('click', function(){
     }
 });
 
+searchInput.addEventListener('keyup', function(){
+    outputContainer.innerHTML = "";
+    filterIdeas();
+ });
+
 
 // Functions
 
@@ -66,7 +71,7 @@ function deleteIdea() {
             ideas.splice(i, 1);
         }
     }
-}
+};
 
 function toggleStar() {
     for (i = 0; i < ideas.length; i++) {
@@ -74,7 +79,7 @@ function toggleStar() {
             ideas[i].updateIdea()
         }
     }
-}
+};
 
 function updateCardOutput(){
   outputContainer.innerHTML = ""
@@ -127,4 +132,27 @@ function showStarred() {
 function inputWarning(){
     titleInput.value = "Please enter a title for your idea!"
     bodyInput.value = "Please enter your idea text!"
-}
+};
+
+function filterIdeas() {
+    for (i = 0; i < ideas.length; i++) {
+        if (ideas[i].title.includes(searchInput.value) || ideas[i].body.includes(searchInput.value)) {
+            var starred = ideas[i].star ? "assets/star-active.svg" : "assets/star.svg";
+            outputContainer.innerHTML +=
+            `<article class="card-container">
+                <div class="container-top-nav" id="${ideas[i].id}">
+                    <img class="star-icon icons" src="${starred}" alt="favorite idea"></img>
+                    <img class="delete-icon icons" src="assets/delete.svg" alt="delete idea"></img>
+                </div>
+                <div class="idea-container">
+                    <p class="title-output">${ideas[i].title}</p>
+                    <p class="body-output">${ideas[i].body}</p>
+                </div>
+                <div class="container-bottom-nav">
+                    <img class="plus-icon icons" src="assets/comment.svg" alt="add comment"></img>
+                    <p class="comment">Comment</p>
+                </div>
+            </article>`
+        }
+    }
+ };
